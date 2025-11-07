@@ -1,12 +1,12 @@
-import React, { useState, useEffect, createContext, useContext } from ‘react’;
-import { ShoppingCart, Heart, Search, Menu, X, User, ChevronDown, Star, Truck, Shield, Phone, Mail, MapPin, Facebook, Instagram, Twitter, Plus, Minus, Filter, ArrowRight, Check } from ‘lucide-react’;
+import React, { useState, useEffect, createContext, useContext } from 'react';
+import { ShoppingCart, Heart, Search, Menu, X, User, ChevronDown, Star, Truck, Shield, Phone, Mail, MapPin, Facebook, Instagram, Twitter, Plus, Minus, Filter, ArrowRight, Check } from 'lucide-react';
 
 // Context for global state management
 const AppContext = createContext();
 
 const useApp = () => {
 const context = useContext(AppContext);
-if (!context) throw new Error(‘useApp must be used within AppProvider’);
+if (!context) throw new Error('useApp must be used within AppProvider');
 return context;
 };
 
@@ -105,12 +105,12 @@ featured: false
 ];
 
 const CATEGORIES = [
-{ id: ‘all’, name: ‘All Sarees’, icon: ‘👗’ },
-{ id: ‘bridal’, name: ‘Bridal’, icon: ‘💍’ },
-{ id: ‘silk’, name: ‘Silk Sarees’, icon: ‘✨’ },
-{ id: ‘casual’, name: ‘Casual Wear’, icon: ‘🌸’ },
-{ id: ‘designer’, name: ‘Designer’, icon: ‘🎨’ },
-{ id: ‘festive’, name: ‘Festive’, icon: ‘🎉’ }
+{ id: 'all', name: 'All Sarees', icon: '👗' },
+{ id: 'bridal', name: 'Bridal', icon: '💍' },
+{ id: 'silk', name: 'Silk Sarees', icon: '✨' },
+{ id: 'casual', name: 'Casual Wear', icon: '🌸' },
+{ id: 'designer', name: 'Designer', icon: '🎨' },
+{ id: 'festive', name: 'Festive', icon: '🎉' }
 ];
 
 // Main App Component
@@ -118,12 +118,12 @@ const RiddhiCollection = () => {
 const [user, setUser] = useState(null);
 const [cart, setCart] = useState([]);
 const [wishlist, setWishlist] = useState([]);
-const [currentPage, setCurrentPage] = useState(‘home’);
+const [currentPage, setCurrentPage] = useState('home');
 const [selectedProduct, setSelectedProduct] = useState(null);
 const [isAdmin, setIsAdmin] = useState(false);
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-const [searchQuery, setSearchQuery] = useState(’’);
-const [filters, setFilters] = useState({ category: ‘all’, sortBy: ‘featured’ });
+const [searchQuery, setSearchQuery] = useState('');
+const [filters, setFilters] = useState({ category: 'all', sortBy: 'featured' });
 
 const addToCart = (product, quantity = 1) => {
 setCart(prev => {
@@ -187,15 +187,15 @@ return (
 <div className="min-h-screen bg-white">
 <Header />
 <main>
-{currentPage === ‘home’ && <HomePage />}
-{currentPage === ‘products’ && <ProductsPage />}
-{currentPage === ‘product-detail’ && <ProductDetailPage />}
-{currentPage === ‘cart’ && <CartPage />}
-{currentPage === ‘checkout’ && <CheckoutPage />}
-{currentPage === ‘login’ && <LoginPage />}
-{currentPage === ‘admin’ && <AdminDashboard />}
-{currentPage === ‘about’ && <AboutPage />}
-{currentPage === ‘contact’ && <ContactPage />}
+{currentPage === 'home' && <HomePage />}
+{currentPage === 'products' && <ProductsPage />}
+{currentPage === 'product-detail' && <ProductDetailPage />}
+{currentPage === 'cart' && <CartPage />}
+{currentPage === 'checkout' && <CheckoutPage />}
+{currentPage === 'login' && <LoginPage />}
+{currentPage === 'admin' && <AdminDashboard />}
+{currentPage === 'about' && <AboutPage />}
+{currentPage === 'contact' && <ContactPage />}
 </main>
 <Footer />
 </div>
@@ -337,7 +337,7 @@ className={`absolute inset-0 transition-opacity duration-1000 ${idx === currentS
 <div className="text-center text-white">
 <h1 className="text-5xl font-serif font-bold mb-4">{banner.title}</h1>
 <p className="text-2xl mb-8">{banner.subtitle}</p>
-<button onClick={() => setCurrentPage(‘products’)} className="bg-gradient-to-r from-amber-700 to-rose-900 text-white px-8 py-3 rounded-lg hover:shadow-lg transition">
+<button onClick={() => setCurrentPage('products')} className="bg-gradient-to-r from-amber-700 to-rose-900 text-white px-8 py-3 rounded-lg hover:shadow-lg transition">
 Shop Now
 </button>
 </div>
@@ -429,7 +429,7 @@ const [imageIndex, setImageIndex] = useState(0);
 
 const handleProductClick = () => {
 setSelectedProduct(product);
-setCurrentPage(‘product-detail’);
+setCurrentPage('product-detail');
 };
 
 return (
@@ -451,7 +451,7 @@ onMouseLeave={() => setImageIndex(0)}
 onClick={(e) => { e.stopPropagation(); toggleWishlist(product); }}
 className={`absolute top-4 right-4 p-2 rounded-full bg-white shadow-md hover:scale-110 transition ${isInWishlist(product.id) ? 'text-rose-900' : 'text-gray-400'}`}
 >
-<Heart size={20} fill={isInWishlist(product.id) ? ‘currentColor’ : ‘none’} />
+<Heart size={20} fill={isInWishlist(product.id) ? 'currentColor' : 'none'} />
 </button>
 </div>
 <div className="p-4">
@@ -487,7 +487,7 @@ const [showFilters, setShowFilters] = useState(false);
 
 let filteredProducts = MOCK_PRODUCTS;
 
-if (filters.category !== ‘all’) {
+if (filters.category !== 'all') {
 filteredProducts = filteredProducts.filter(p => p.category === filters.category);
 }
 
@@ -498,11 +498,11 @@ p.description.toLowerCase().includes(searchQuery.toLowerCase())
 );
 }
 
-if (filters.sortBy === ‘price-low’) {
+if (filters.sortBy === 'price-low') {
 filteredProducts = […filteredProducts].sort((a, b) => a.price - b.price);
-} else if (filters.sortBy === ‘price-high’) {
+} else if (filters.sortBy === 'price-high') {
 filteredProducts = […filteredProducts].sort((a, b) => b.price - a.price);
-} else if (filters.sortBy === ‘rating’) {
+} else if (filters.sortBy === 'rating') {
 filteredProducts = […filteredProducts].sort((a, b) => b.rating - a.rating);
 }
 
@@ -713,7 +713,7 @@ return (
 <h2 className="text-3xl font-bold mb-4">Your cart is empty</h2>
 <p className="text-gray-600 mb-8">Add some beautiful sarees to your cart!</p>
 <button
-onClick={() => setCurrentPage(‘products’)}
+onClick={() => setCurrentPage('products')}
 className="bg-gradient-to-r from-amber-700 to-rose-900 text-white px-8 py-3 rounded-lg hover:shadow-lg transition"
 >
 Continue Shopping
@@ -834,14 +834,14 @@ return (
 const CheckoutPage = () => {
 const { cart, cartTotal, setCurrentPage } = useApp();
 const [formData, setFormData] = useState({
-name: ‘’,
-email: ‘’,
-phone: ‘’,
-address: ‘’,
-city: ‘’,
-state: ‘’,
-pincode: ‘’,
-paymentMethod: ‘card’
+name: '',
+email: '',
+phone: '',
+address: '',
+city: '',
+state: '',
+pincode: '',
+paymentMethod: 'card'
 });
 const [orderPlaced, setOrderPlaced] = useState(false);
 
@@ -853,7 +853,7 @@ const handleSubmit = (e) => {
 e.preventDefault();
 setOrderPlaced(true);
 setTimeout(() => {
-setCurrentPage(‘home’);
+setCurrentPage('home');
 }, 3000);
 };
 
@@ -1054,7 +1054,7 @@ return (
 const LoginPage = () => {
 const { setUser, setCurrentPage, setIsAdmin } = useApp();
 const [isLogin, setIsLogin] = useState(true);
-const [formData, setFormData] = useState({ email: ‘’, password: ‘’, name: ‘’ });
+const [formData, setFormData] = useState({ email: '', password: '', name: '' });
 
 const handleSubmit = (e) => {
 e.preventDefault();
@@ -1078,7 +1078,7 @@ return (
 <div className="container mx-auto px-4">
 <div className="max-w-md mx-auto bg-white rounded-lg shadow-xl p-8">
 <h2 className="text-3xl font-serif font-bold text-center mb-8">
-{isLogin ? ‘Welcome Back’ : ‘Create Account’}
+{isLogin ? 'Welcome Back' : 'Create Account'}
 </h2>
 
 ```
@@ -1144,10 +1144,10 @@ return (
 
 // Admin Dashboard
 const AdminDashboard = () => {
-const [activeTab, setActiveTab] = useState(‘dashboard’);
+const [activeTab, setActiveTab] = useState('dashboard');
 const [products, setProducts] = useState(MOCK_PRODUCTS);
 const [newProduct, setNewProduct] = useState({
-name: ‘’, category: ‘silk’, price: ‘’, originalPrice: ‘’, fabric: ‘’, color: ‘’, stock: ‘’, description: ‘’
+name: '', category: 'silk', price: '', originalPrice: '', fabric: '', color: '', stock: '', description: ''
 });
 
 const totalRevenue = products.reduce((sum, p) => sum + (p.price * (p.reviews || 10)), 0);
@@ -1167,8 +1167,8 @@ reviews: 0,
 featured: false
 };
 setProducts([…products, product]);
-setNewProduct({ name: ‘’, category: ‘silk’, price: ‘’, originalPrice: ‘’, fabric: ‘’, color: ‘’, stock: ‘’, description: ‘’ });
-setActiveTab(‘products’);
+setNewProduct({ name: '', category: 'silk', price: '', originalPrice: '', fabric: '', color: '', stock: '', description: '' });
+setActiveTab('products');
 };
 
 return (
@@ -1473,7 +1473,7 @@ return (
 
 // Contact Page
 const ContactPage = () => {
-const [formData, setFormData] = useState({ name: ‘’, email: ‘’, subject: ‘’, message: ‘’ });
+const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
 const [submitted, setSubmitted] = useState(false);
 
 const handleSubmit = (e) => {
@@ -1481,7 +1481,7 @@ e.preventDefault();
 setSubmitted(true);
 setTimeout(() => {
 setSubmitted(false);
-setFormData({ name: ‘’, email: ‘’, subject: ‘’, message: ‘’ });
+setFormData({ name: '', email: '', subject: '', message: '' });
 }, 3000);
 };
 
@@ -1489,7 +1489,7 @@ return (
 <div className="py-12">
 <div className="container mx-auto px-4">
 <h1 className="text-5xl font-serif font-bold text-center mb-6">Contact Us</h1>
-<p className="text-center text-gray-600 text-lg mb-12">We’d love to hear from you</p>
+<p className="text-center text-gray-600 text-lg mb-12">We'd love to hear from you</p>
 
 ```
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -1624,13 +1624,13 @@ return (
 // Footer Component
 const Footer = () => {
 const { setCurrentPage } = useApp();
-const [email, setEmail] = useState(’’);
+const [email, setEmail] = useState('');
 const [subscribed, setSubscribed] = useState(false);
 
 const handleSubscribe = (e) => {
 e.preventDefault();
 setSubscribed(true);
-setEmail(’’);
+setEmail('');
 setTimeout(() => setSubscribed(false), 3000);
 };
 
