@@ -14,14 +14,14 @@ return context;
 const MOCK_PRODUCTS = [
 {
 id: 1,
-name: “Banarasi Silk Saree”,
-category: “silk”,
+name: "Banarasi Silk Saree",
+category: "silk",
 price: 8999,
 originalPrice: 12999,
-images: [“https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800”, “https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=800”],
-description: “Exquisite Banarasi silk saree with intricate golden zari work. Perfect for weddings and special occasions.”,
-fabric: “Pure Silk”,
-color: “Maroon”,
+images: ["https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800", "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=800"],
+description: "Exquisite Banarasi silk saree with intricate golden zari work. Perfect for weddings and special occasions.",
+fabric: "Pure Silk",
+color: "Maroon",
 stock: 15,
 rating: 4.8,
 reviews: 124,
@@ -29,14 +29,14 @@ featured: true
 },
 {
 id: 2,
-name: “Bridal Red Saree”,
-category: “bridal”,
+name: "Bridal Red Saree",
+category: "bridal",
 price: 15999,
 originalPrice: 20999,
-images: [“https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800”, “https://images.unsplash.com/photo-1583391733981-9c0c8b0b7b7b?w=800”],
-description: “Stunning bridal saree with heavy embroidery and stone work. Make your special day unforgettable.”,
-fabric: “Georgette with Silk”,
-color: “Red”,
+images: ["https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800", "https://images.unsplash.com/photo-1583391733981-9c0c8b0b7b7b?w=800"],
+description: "Stunning bridal saree with heavy embroidery and stone work. Make your special day unforgettable.",
+fabric: "Georgette with Silk",
+color: "Red",
 stock: 8,
 rating: 4.9,
 reviews: 89,
@@ -44,14 +44,14 @@ featured: true
 },
 {
 id: 3,
-name: “Casual Cotton Saree”,
-category: “casual”,
+name: "Casual Cotton Saree",
+category: "casual",
 price: 1499,
 originalPrice: 2499,
-images: [“https://images.unsplash.com/photo-1598258636081-44d89b6d4c3d?w=800”],
-description: “Comfortable cotton saree for daily wear. Breathable fabric perfect for all-day comfort.”,
-fabric: “Pure Cotton”,
-color: “Blue”,
+images: ["https://images.unsplash.com/photo-1598258636081-44d89b6d4c3d?w=800"],
+description: "Comfortable cotton saree for daily wear. Breathable fabric perfect for all-day comfort.",
+fabric: "Pure Cotton",
+color: "Blue",
 stock: 25,
 rating: 4.5,
 reviews: 210,
@@ -59,14 +59,14 @@ featured: false
 },
 {
 id: 4,
-name: “Designer Georgette Saree”,
-category: “designer”,
+name: "Designer Georgette Saree",
+category: "designer",
 price: 6999,
 originalPrice: 9999,
-images: [“https://images.unsplash.com/photo-1610030469751-64387df5c114?w=800”],
-description: “Contemporary designer saree with modern prints and elegant drape.”,
-fabric: “Georgette”,
-color: “Green”,
+images: ["https://images.unsplash.com/photo-1610030469751-64387df5c114?w=800"],
+description: "Contemporary designer saree with modern prints and elegant drape.",
+fabric: "Georgette",
+color: "Green",
 stock: 12,
 rating: 4.7,
 reviews: 156,
@@ -74,14 +74,14 @@ featured: true
 },
 {
 id: 5,
-name: “Festive Gold Saree”,
-category: “festive”,
+name: "Festive Gold Saree",
+category: "festive",
 price: 5499,
 originalPrice: 7999,
-images: [“https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800”],
-description: “Beautiful festive saree with golden border and traditional motifs.”,
-fabric: “Art Silk”,
-color: “Gold”,
+images: ["https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=800"],
+description: "Beautiful festive saree with golden border and traditional motifs.",
+fabric: "Art Silk",
+color: "Gold",
 stock: 18,
 rating: 4.6,
 reviews: 98,
@@ -89,14 +89,14 @@ featured: false
 },
 {
 id: 6,
-name: “Chanderi Silk Saree”,
-category: “silk”,
+name: "Chanderi Silk Saree",
+category: "silk",
 price: 4999,
 originalPrice: 6999,
-images: [“https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=800”],
-description: “Lightweight Chanderi silk saree with delicate handwoven patterns.”,
-fabric: “Chanderi Silk”,
-color: “Peach”,
+images: ["https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=800"],
+description: "Lightweight Chanderi silk saree with delicate handwoven patterns.",
+fabric: "Chanderi Silk",
+color: "Peach",
 stock: 20,
 rating: 4.7,
 reviews: 143,
@@ -309,9 +309,9 @@ const { setCurrentPage, setSelectedProduct, setFilters } = useApp();
 const [currentSlide, setCurrentSlide] = useState(0);
 
 const banners = [
-{ title: “Bridal Collection 2025”, subtitle: “Exclusive Designer Sarees”, image: “https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=1200” },
-{ title: “Pure Silk Elegance”, subtitle: “Handwoven Masterpieces”, image: “https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1200” },
-{ title: “Festive Special”, subtitle: “Traditional Charm”, image: “https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=1200” }
+{ title: "Bridal Collection 2025", subtitle: "Exclusive Designer Sarees", image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=1200" },
+{ title: "Pure Silk Elegance", subtitle: "Handwoven Masterpieces", image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1200" },
+{ title: "Festive Special", subtitle: "Traditional Charm", image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=1200" }
 ];
 
 useEffect(() => {
@@ -337,7 +337,7 @@ className={`absolute inset-0 transition-opacity duration-1000 ${idx === currentS
 <div className="text-center text-white">
 <h1 className="text-5xl font-serif font-bold mb-4">{banner.title}</h1>
 <p className="text-2xl mb-8">{banner.subtitle}</p>
-<button onClick={() => setCurrentPage(‘products’)} className=“bg-gradient-to-r from-amber-700 to-rose-900 text-white px-8 py-3 rounded-lg hover:shadow-lg transition”>
+<button onClick={() => setCurrentPage(‘products’)} className="bg-gradient-to-r from-amber-700 to-rose-900 text-white px-8 py-3 rounded-lg hover:shadow-lg transition">
 Shop Now
 </button>
 </div>
@@ -438,7 +438,7 @@ return (
 <img
 src={product.images[imageIndex]}
 alt={product.name}
-className=“w-full h-80 object-cover group-hover:scale-110 transition duration-500”
+className="w-full h-80 object-cover group-hover:scale-110 transition duration-500"
 onMouseEnter={() => product.images[1] && setImageIndex(1)}
 onMouseLeave={() => setImageIndex(0)}
 />
@@ -471,7 +471,7 @@ className={`absolute top-4 right-4 p-2 rounded-full bg-white shadow-md hover:sca
 </div>
 <button
 onClick={() => addToCart(product)}
-className=“w-full bg-gradient-to-r from-amber-700 to-rose-900 text-white py-2 rounded-lg hover:shadow-lg transition”
+className="w-full bg-gradient-to-r from-amber-700 to-rose-900 text-white py-2 rounded-lg hover:shadow-lg transition"
 >
 Add to Cart
 </button>
@@ -511,7 +511,7 @@ return (
 <div className="container mx-auto px-4">
 <div className="flex justify-between items-center mb-8">
 <h1 className="text-4xl font-serif font-bold">Our Collection</h1>
-<button onClick={() => setShowFilters(!showFilters)} className=“lg:hidden flex items-center gap-2 border px-4 py-2 rounded-lg”>
+<button onClick={() => setShowFilters(!showFilters)} className="lg:hidden flex items-center gap-2 border px-4 py-2 rounded-lg">
 <Filter size={20} /> Filters
 </button>
 </div>
@@ -714,7 +714,7 @@ return (
 <p className="text-gray-600 mb-8">Add some beautiful sarees to your cart!</p>
 <button
 onClick={() => setCurrentPage(‘products’)}
-className=“bg-gradient-to-r from-amber-700 to-rose-900 text-white px-8 py-3 rounded-lg hover:shadow-lg transition”
+className="bg-gradient-to-r from-amber-700 to-rose-900 text-white px-8 py-3 rounded-lg hover:shadow-lg transition"
 >
 Continue Shopping
 </button>
@@ -1161,7 +1161,7 @@ id: products.length + 1,
 price: parseFloat(newProduct.price),
 originalPrice: parseFloat(newProduct.originalPrice),
 stock: parseInt(newProduct.stock),
-images: [“https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800”],
+images: ["https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800"],
 rating: 4.5,
 reviews: 0,
 featured: false
